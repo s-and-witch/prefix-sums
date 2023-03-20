@@ -1,0 +1,30 @@
+cabal-version:      3.4
+name:               prefix-sums
+version:            0.1.0.0
+-- synopsis:
+-- description:
+license:            MIT
+license-file:       LICENSE
+author:             Andrei Borzenkov
+maintainer:         andreyborzenkov2002@gmail.com
+-- copyright:
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall -O2 -rtsopts "-with-rtsopts=-A64M -AL256M -I0 -T" -fproc-alignment=64 -fllvm
+
+executable prefix-sums
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:    base, tasty-bench, prefix-sums
+    hs-source-dirs:   app
+    default-language: GHC2021
+
+library
+    exposed-modules:  Implementations
+    asm-sources:      asm/PostfixSums.s
+    build-depends:    base, template-haskell, vector
+    hs-source-dirs:   src
+    default-language: GHC2021
