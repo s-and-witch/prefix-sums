@@ -493,8 +493,8 @@ implementations =
   , ( [|| scanl'Prelude ||]          , [|| "scanl'Prelude" ||] )
   , ( [|| scanl'Manual ||]           , [|| "scanl'Manual" ||] )
   , ( [|| reverse'scanl''reverse ||] , [|| "reverse'scanl''reverse" ||] )
-  , ( [|| obviousFunction ||]        , [|| "obviousFunction" ||] )
-  -- comment this if it would be too slow
+  -- , ( [|| obviousFunction ||]        , [|| "obviousFunction" ||] )
+  -- uncomment this if you like slowage
   , ( [|| foldl''reverse ||]         , [|| "foldl''reverse" ||] )
   , ( [|| foldrPrelude ||]           , [|| "foldrPrelude" ||] )
   , ( [|| tardisManual ||]           , [|| "tardisManual" ||] )
@@ -510,8 +510,8 @@ implementations =
   , ( [|| scanl'ManualUF ||]         , [|| "scanl'ManualUF" ||] )
   , ( [|| scanr1ManualUF ||]         , [|| "scanr1ManualUF" ||] )
   , ( [|| qnikst3 ||]                , [|| "qnikst3" ||] )
-  , ( [|| sums_Of_Subsets ||]        , [|| "sums_Of_Subsets" ||] )
-  -- comment this if it would be too slow
+  -- , ( [|| sums_Of_Subsets ||]        , [|| "sums_Of_Subsets" ||] )
+  -- uncomment this if you like slowage
   , ( [|| simdy ||]                  , [|| "simdy" ||] )
   ]
 {-# INLINE implementations #-}
